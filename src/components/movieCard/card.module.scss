@@ -12,17 +12,20 @@
     color: black;
     position: relative;
     box-shadow: 3px 3px 6px rgba(128,128,128, .5);   
-     
+    opacity: 0.7;
     .bannerImg{
             width: 100%;
-            height: 160px;  }
+            height: 160px;
+            border-radius: 3px;
+        }
 
             h3{
                 margin: 5px;
             }
             p{
+                font-size: smaller;
                 margin-bottom: 5px;
-                overflow: hidden;
+                overflow-y: auto;
             }
 
             .ratingCont{
@@ -46,4 +49,8 @@
 }
 
 
-
+.container:hover{
+    transition-duration: 0.6s;
+    opacity: 1;
+    cursor: pointer;
+}
