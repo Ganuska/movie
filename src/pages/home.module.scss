@@ -1,0 +1,30 @@
+@import 'variables.scss';
+
+.content{
+    display: grid;
+    grid-template-columns:repeat(auto-fill, 305px) ;
+    gap: 3rem;
+    min-height:80vh;
+    background:linear-gradient(to left top ,$forthColor,$fifthColor);
+    padding:3rem;
+    backdrop-filter: blur(40rem);
+    padding-bottom: 10rem;
+    position: relative;
+    justify-content:center ;
+
+}
+
+.btn{
+    justify-self: center;
+position: absolute;
+bottom: 30px;
+width: 100px;
+height: 100px;
+border-radius: 100%;
+background-color:$forthColor;
+border: none;
+}
+.btn:hover{
+    background-color: aqua;
+}
+

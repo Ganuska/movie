@@ -1,0 +1,10 @@
+@import 'variables.scss';
+
+.nav{
+display: flex;
+color: $forthColor;
+height: 4rem;
+align-items: center;
+padding-left: 1rem;
+background-color: $primaryColor;
+}
