@@ -2,7 +2,7 @@
 
 .content{
     display: grid;
-    grid-template-columns:repeat(3, 300px);
+    grid-template-columns:repeat(auto-fill, 300px);
     flex-wrap: wrap;
     gap: 3rem;
     min-height:80vh;

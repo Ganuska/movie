@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Card from "../components/movieCard/Card";
 import styles from "./home.module.scss";
+
 const Home = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(2);
@@ -38,7 +39,7 @@ const Home = () => {
             language={movie.original_language}
             rating={movie.vote_average}
             description={movie.overview}
-            year={movie.release_date}
+            year={movie.release_date.slice(0, 4)}
           />
         );
       })}
