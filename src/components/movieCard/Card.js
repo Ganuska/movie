@@ -1,7 +1,15 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router";
 import styles from "./card.module.scss";
-const Card = ({ title, description, language, src, rating, year }) => {
+const Card = ({
+  title,
+  description,
+  language,
+  src,
+  rating,
+  year,
+  bigPhoto,
+}) => {
   const navigate = useNavigate();
   const [source, setSource] = useState();
   useEffect(() => {
@@ -17,14 +25,15 @@ const Card = ({ title, description, language, src, rating, year }) => {
       className={styles.container}
       onClick={() =>
         navigate("/Movie", {
-          state: { year, rating, src, language, title, description },
+          state: { year, rating, src, language, title, description, bigPhoto },
         })
       }
     >
       <img className={styles.bannerImg} src={source} alt="movie banner" />
-      <h3>{title}</h3>
-      <p>{language}</p>
-      <p>{year}</p>
+      <h4>
+        {title} ({year})
+      </h4>
+      <p className={styles.langCont}>{language}</p>
       <div className={styles.ratingCont}>
         <p>{rating}</p>
       </div>

@@ -30,22 +30,25 @@ const Home = () => {
 
   return (
     <div className={styles.content}>
-      {movies?.map((movie) => {
-        return (
-          <Card
-            key={movie.id}
-            src={movie.backdrop_path}
-            title={movie.original_title}
-            language={movie.original_language}
-            rating={movie.vote_average}
-            description={movie.overview}
-            year={movie.release_date.slice(0, 4)}
-          />
-        );
-      })}
+      {movies
+        ?.filter((item) => item.backdrop_path)
+        .map((movie) => {
+          return (
+            <Card
+              key={movie.id}
+              src={movie.backdrop_path}
+              title={movie.original_title}
+              language={movie.original_language}
+              rating={movie.vote_average}
+              description={movie.overview}
+              year={movie.release_date.slice(0, 4)}
+              bigPhoto={movie.poster_path}
+            />
+          );
+        })}
 
       <button onClick={fetchMore} className={styles.btn}>
-        load
+        load more
       </button>
     </div>
   );
