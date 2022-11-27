@@ -15,7 +15,7 @@ const Movie = () => {
     <main className={styles.container}>
       <img src={source + bigPhoto} alt="movie" />
       <div className={styles.descWraper}>
-        <h3>
+        <h3 className={styles.title}>
           {title} ({year.slice(0, 4)})
         </h3>
 
