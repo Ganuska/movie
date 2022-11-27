@@ -5,9 +5,9 @@ import Styles from "./layout.module.scss";
 const Layout = ({ children }) => {
   return (
     <div className={Styles.mainLayout}>
-      {/* <NavBar /> */}
+      <NavBar />
       {children}
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 };
