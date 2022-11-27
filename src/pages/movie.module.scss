@@ -1,0 +1,78 @@
+@import 'variables';
+
+.container{
+    display: flex;
+    max-height: 100vh;
+    color: beige;
+}
+
+
+@media(max-width:468px){
+    .container{
+        flex-direction: column;
+        text-align: center;
+        position: relative;
+    }
+    p{
+        padding-left: 20px;
+        padding-right: 20px;
+        font-size: 0.7rem;
+    }
+    .starsContainer{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+    .rating{
+        margin-top: auto;
+        font-size: 1.4rem;
+        padding-left: 10px;
+    }
+    
+    
+}
+.btn{
+ justify-self: center;
+width: 8rem;
+height: 3rem;
+text-transform: uppercase;
+background-color:$forthColor;
+border: none;
+color: beige;
+border-radius: 3px;
+background-color: $primaryColor;
+cursor: pointer;
+margin-bottom: 80px;
+}
+.btn:hover{
+    background-color: $secondaryColor;
+}
+
+.descWraper{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+
+    h3{
+        font-size: 3rem;
+    }
+}
+
+.starsContainer{
+    margin-top: 40px;
+}
+
+.rating{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-left: 25px;
+}
