@@ -6,7 +6,7 @@
     bottom: 0;
     left: 0;
     right: 0;
-    background-color:rgba($color: white, $alpha: 0.6);
+    background-color:rgba($color: white, $alpha: 0.1);
     z-index: 200;
     display: flex;
     justify-content: center;
@@ -49,6 +49,7 @@
 .btn{
     position: absolute;
     bottom: 30px;
+    left: 100px;
     height: 40px;
     width: 200px;
     background-color: rgba($color: black, $alpha: 0.2);
@@ -60,11 +61,19 @@
     cursor: pointer;
 }
 
-.radioSec{
-display: flex;
+
+
+form.radioSec{
+    display: flex;
 width: 80%;
 gap: 15px;
 flex-direction: column;
-align-items: flex-start;
-justify-content: flex-start;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    div{
+        display: flex;
+        width: 200px;
+        justify-content: space-between;
+    }
 }

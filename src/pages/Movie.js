@@ -10,7 +10,7 @@ const Movie = () => {
   };
   const state = useLocation();
   const source = "https://image.tmdb.org/t/p/w500/";
-  const { title, description, src, year, rating, bigPhoto } = state.state;
+  const { title, description, year, rating, bigPhoto } = state.state;
   return (
     <main className={styles.container}>
       <img src={source + bigPhoto} alt="movie" />
@@ -33,7 +33,7 @@ const Movie = () => {
           <div className={styles.rating}>{rating}</div>
         </div>
 
-        <button className={styles.btn} onClick={() => nav(-1)}>
+        <button className={styles.btn} onClick={() => nav("/")}>
           go back
         </button>
       </div>
