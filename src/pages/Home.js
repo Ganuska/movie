@@ -13,7 +13,7 @@ const Home = () => {
       const result = await axios(
         `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}`
       );
-      console.log(result.data);
+      // console.log(result.data);
       setMovies(result.data.results);
     };
     fetchData();
@@ -58,7 +58,7 @@ const Home = () => {
               <Card
                 key={movie.id}
                 src={movie.backdrop_path}
-                title={movie.original_title}
+                title={movie.title}
                 language={movie.original_language}
                 rating={movie.vote_average}
                 description={movie.overview}

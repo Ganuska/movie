@@ -2,12 +2,14 @@
 
 .container{
     display: flex;
-    min-height: 100vh;
+    // max-height: 80%;
     color: beige;
 }
-img{
-    height: 100vh;
+
+main>img{
+ height: 80vh;
 }
+
 .btn{
     justify-self: center;
 width: 8rem;
@@ -31,7 +33,7 @@ margin-bottom: 80px;
     justify-content: space-between;
     padding-left: 20px;
     padding-right: 20px;
-
+    max-height: 80vh;
 }
 
 .title{font-size: 3rem;}
@@ -63,6 +65,11 @@ margin-bottom: 80px;
         
         
     }
+
+
+main>img{
+    height: 65vh;
+   }
 
     .descWraper{
         display: flex;
