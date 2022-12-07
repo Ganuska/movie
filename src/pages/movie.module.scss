@@ -2,12 +2,12 @@
 
 .container{
     display: flex;
-    // max-height: 80%;
+    height: 100%;
     color: beige;
 }
 
 main>img{
- height: 80vh;
+max-height: calc(100vh - 8.9rem) ;
 }
 
 .btn{

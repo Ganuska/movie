@@ -49,44 +49,52 @@ const Modal = (props) => {
         <h1>Select Genre:</h1>
         <form onSubmit={handleSubmit} className={styles.radioSec}>
           <div>
-            <label htmlFor="10749">Romance</label>
-            <input
-              id="10749"
-              type="radio"
-              name="genre"
-              value={genre}
-              onChange={handleChange}
-            />
+            <label htmlFor="10749">
+              Romance
+              <input
+                id="10749"
+                type="radio"
+                name="genre"
+                value={genre}
+                onChange={handleChange}
+              />
+            </label>
           </div>
           <div>
-            <label htmlFor="18">Drama</label>
-            <input
-              id="18"
-              type="radio"
-              name="genre"
-              value={genre}
-              onChange={handleChange}
-            />
+            <label htmlFor="18">
+              Drama
+              <input
+                id="18"
+                type="radio"
+                name="genre"
+                value={genre}
+                onChange={handleChange}
+              />
+            </label>
           </div>
           <div>
-            <label htmlFor="35">Comedy</label>
-            <input
-              id="35"
-              type="radio"
-              name="genre"
-              value={genre}
-              onChange={handleChange}
-            />
+            <label htmlFor="35">
+              Comedy
+              <input
+                id="35"
+                type="radio"
+                name="genre"
+                value={genre}
+                onChange={handleChange}
+              />
+            </label>
           </div>
           <div>
-            <label htmlFor="28">action</label>
-            <input
-              id="28"
-              type="radio"
-              name="genre"
-              value={genre}
-              onChange={handleChange}
-            />
+            <label htmlFor="28">
+              action
+              <input
+                id="28"
+                type="radio"
+                name="genre"
+                value={genre}
+                onChange={handleChange}
+              />
+            </label>
           </div>
           <button className={styles.btn} onClick={handleSubmit}>
             ROLL

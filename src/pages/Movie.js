@@ -4,6 +4,7 @@ import ReactStars from "react-rating-stars-component";
 import styles from "./movie.module.scss";
 const Movie = () => {
   const nav = useNavigate();
+  document.body.style.overflow = "unset";
 
   const ratingChanged = (newRating) => {
     console.log(newRating);
