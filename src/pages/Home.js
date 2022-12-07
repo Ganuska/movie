@@ -24,7 +24,6 @@ const Home = () => {
     const result = await axios(
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
     );
-    console.log(result.data.results);
     setMovies((old) => {
       return [...old, ...result.data.results];
     });
@@ -65,6 +64,7 @@ const Home = () => {
                 description={movie.overview}
                 year={movie.release_date.slice(0, 4)}
                 bigPhoto={movie.poster_path}
+                id={movie.id}
               />
             );
           })}

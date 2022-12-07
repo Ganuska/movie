@@ -9,6 +9,7 @@ const Card = ({
   rating,
   year,
   bigPhoto,
+  id,
 }) => {
   const navigate = useNavigate();
   const [source, setSource] = useState();
@@ -25,7 +26,16 @@ const Card = ({
       className={styles.container}
       onClick={() =>
         navigate("/Movie", {
-          state: { year, rating, src, language, title, description, bigPhoto },
+          state: {
+            year,
+            rating,
+            src,
+            language,
+            title,
+            description,
+            bigPhoto,
+            id,
+          },
         })
       }
     >

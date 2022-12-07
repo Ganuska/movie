@@ -13,7 +13,6 @@ const Modal = (props) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     props.showModal();
-    console.log(genre);
     if (genre !== "" && random) {
       console.log(random);
       navigate("/Movie", {
@@ -25,6 +24,7 @@ const Modal = (props) => {
           title: random.title,
           description: random.overview,
           bigPhoto: random.poster_path,
+          id: random.id,
         },
       });
     }
