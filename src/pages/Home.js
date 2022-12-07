@@ -8,6 +8,7 @@ const Home = () => {
   const [movies, setMovies] = useState([]);
   const [page, setPage] = useState(2);
   const [showModal, setShowModal] = useState(false);
+
   useEffect(() => {
     const fetchData = async () => {
       const result = await axios(
@@ -23,7 +24,6 @@ const Home = () => {
     const result = await axios(
       `https://api.themoviedb.org/3/discover/movie?api_key=${process.env.REACT_APP_API_KEY}&page=${page}`
     );
-    console.log(result.data.results);
     setMovies((old) => {
       return [...old, ...result.data.results];
     });
@@ -39,7 +39,7 @@ const Home = () => {
       {showModal && (
         <Modal
           showModal={() => {
-            setShowModal(false);
+            setShowModal((old) => !old);
           }}
         />
       )}
@@ -64,6 +64,7 @@ const Home = () => {
                 description={movie.overview}
                 year={movie.release_date.slice(0, 4)}
                 bigPhoto={movie.poster_path}
+                id={movie.id}
               />
             );
           })}

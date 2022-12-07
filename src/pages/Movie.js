@@ -1,16 +1,27 @@
-import React from "react";
+import React, { useState } from "react";
 import { useLocation, useNavigate } from "react-router";
 import ReactStars from "react-rating-stars-component";
 import styles from "./movie.module.scss";
+import { useEffect } from "react";
 const Movie = () => {
+  const [rate, setRate] = useState(
+    localStorage.getItem("rating")
+      ? JSON.parse(localStorage.getItem("rating"))
+      : {}
+  );
   const nav = useNavigate();
-
-  const ratingChanged = (newRating) => {
-    console.log(newRating);
-  };
   const state = useLocation();
+  document.body.style.overflow = "unset";
+  const { title, description, year, rating, bigPhoto, id } = state.state;
   const source = "https://image.tmdb.org/t/p/w500/";
-  const { title, description, year, rating, bigPhoto } = state.state;
+  useEffect(() => {
+    localStorage.setItem("rating", JSON.stringify(rate));
+  }, [rate]);
+  const ratingChanged = (newRating) => {
+    setRate((old) => {
+      return { ...old, [id]: newRating };
+    });
+  };
   return (
     <main className={styles.container}>
       <img src={source + bigPhoto} alt="movie" />
@@ -25,7 +36,7 @@ const Movie = () => {
             count={10}
             onChange={ratingChanged}
             size={24}
-            value={rating}
+            value={rate[id] ? rate[id] : 0}
             isHalf="true"
             activeColor="#ffd700"
           />
